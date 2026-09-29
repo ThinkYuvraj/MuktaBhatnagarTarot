@@ -27,11 +27,11 @@ export const Hero: React.FC = () => {
 
       <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 relative z-10">
         
-        {/* Responsive Grid / Flex: On mobile photo is prioritized, on tablet & desktop balanced side-by-side */}
+        {/* Responsive Grid / Flex: Image on Left, Text Content on Right */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-10 lg:gap-16 xl:gap-20">
           
-          {/* Portrait container: Mobile-first (Order 1 on mobile, Order 2 on tablet/desktop) */}
-          <div className="order-1 md:order-2 w-full max-w-[300px] xs:max-w-[320px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[420px] xl:max-w-[460px] 2xl:max-w-[500px] flex justify-center shrink-0">
+          {/* Portrait container: Left on Tablet/Desktop */}
+          <div className="order-1 md:order-1 w-full max-w-[300px] xs:max-w-[320px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[420px] xl:max-w-[460px] 2xl:max-w-[500px] flex justify-center shrink-0">
             <div className="relative w-full max-w-[270px] xs:max-w-[290px] sm:max-w-[320px] md:max-w-[340px] lg:max-w-[400px] xl:max-w-[440px] 2xl:max-w-[480px] aspect-[4/5] mx-auto">
               
               {/* Main Photo container with clean curved arch top */}
@@ -49,7 +49,7 @@ export const Hero: React.FC = () => {
               </div>
 
               {/* Badge: 6+ years · Delhi & online */}
-              <div className="absolute bottom-4 -left-2 sm:-left-4 bg-white/95 backdrop-blur-md border border-[#C9A45C]/40 shadow-md shadow-[#3E2F3A]/10 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#3E2F3A] transition-transform">
+              <div className="absolute bottom-4 -right-2 sm:-right-4 bg-white/95 backdrop-blur-md border border-[#C9A45C]/40 shadow-md shadow-[#3E2F3A]/10 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#3E2F3A] transition-transform">
                 <span className="font-bold text-[#E8912D]">6+ years</span>
                 <span className="text-[#C9A45C]">·</span>
                 <span className="text-[#3E2F3A]/85">Delhi & online</span>
@@ -57,8 +57,8 @@ export const Hero: React.FC = () => {
             </div>
           </div>
 
-          {/* Text Content Block */}
-          <div className="order-2 md:order-1 text-center md:text-left flex flex-col items-center md:items-start max-w-xl lg:max-w-2xl xl:max-w-3xl">
+          {/* Text Content Block: Right on Tablet/Desktop */}
+          <div className="order-2 md:order-2 text-center md:text-left flex flex-col items-center md:items-start max-w-xl lg:max-w-2xl xl:max-w-3xl">
             
             {/* Top Kicker Label with animated sparkle */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/80 border border-[#C9A45C]/30 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#C9A45C] mb-3 sm:mb-5 shadow-xs">
