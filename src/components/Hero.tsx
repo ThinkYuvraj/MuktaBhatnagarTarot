@@ -27,8 +27,8 @@ export const Hero: React.FC = () => {
 
       <div className="max-w-6xl 2xl:max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Responsive Grid / Flex: Auto-adjusting fluid gap between image on Left and Text Content on Right */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-[clamp(1rem,3vw,2.5rem)]">
+        {/* Responsive Grid / Flex: Auto-adjusting fluid gap (+4px) between image on Left and Text Content on Right */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-5 sm:gap-7 md:gap-[clamp(1.25rem,3.2vw,2.75rem)]">
           
           {/* Portrait container: Left on Tablet/Desktop */}
           <div className="order-1 md:order-1 w-full max-w-[300px] xs:max-w-[320px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[420px] xl:max-w-[460px] 2xl:max-w-[500px] flex justify-center shrink-0">
