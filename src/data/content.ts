@@ -10,11 +10,12 @@ export interface ServicePackage {
 
 export interface ReviewItem {
   id: string;
+  category: 'tarot' | 'health';
   clientName: string;
   roleOrNote?: string;
   text: string;
   highlight: string;
-  themeColor?: 'maroon' | 'navy';
+  themeColor?: 'maroon' | 'navy' | 'emerald' | 'sage';
   isHindi?: boolean;
 }
 
@@ -144,8 +145,10 @@ export const PRICING_PACKAGES: ServicePackage[] = [
 ];
 
 export const REVIEWS: ReviewItem[] = [
+  // --- Category: Tarot Client Reviews ---
   {
     id: "review-krishna",
+    category: "tarot",
     clientName: "Krishna",
     roleOrNote: "Tarot Reading Client",
     text: "Hello Friends Mukta Bhatnagar is a wonderful good human being. She is such a fantastic Tarot card reader, her predictions are very correct. She explained in such a nice way each & every word of Tarot card meaning. I am so happy for her & satisfied with her predictions. Thanks 🙏",
@@ -154,6 +157,7 @@ export const REVIEWS: ReviewItem[] = [
   },
   {
     id: "review-charu",
+    category: "tarot",
     clientName: "Dr. Charu Varma",
     roleOrNote: "Doctor & Tarot Client",
     text: "I wanted to take a moment to express my heartfelt thanks for the tarot reading you provided. Your insights and analysis were incredibly accurate and have given me a great deal of satisfaction and clarity. I truly appreciate the time and effort you put into each reading, and your ability to address my questions with such precision is truly remarkable.",
@@ -162,6 +166,7 @@ export const REVIEWS: ReviewItem[] = [
   },
   {
     id: "review-kavita",
+    category: "tarot",
     clientName: "Kavita",
     roleOrNote: "Tarot Client",
     text: "Thank you so much mam, aapse baat karke mujhe bahut relax mila. Mera man ek dum shant ho gaya. Main bahut time se pareshan thi but aapse baat karke main theek ho gayi. Aapne jo mujhe guide kiya woh mujhe bahut achha laga. Again thank you 🙏",
@@ -171,6 +176,7 @@ export const REVIEWS: ReviewItem[] = [
   },
   {
     id: "review-rameshwar",
+    category: "tarot",
     clientName: "Dr. Rameshwar Kr",
     roleOrNote: "Consultation Client",
     text: "Mukta ji kis tarah se aapka thanks karu nishabd hu, bahut hi saral tarike se aapne mera kaam solve kiya. Aap real me nek dil or sahayak hain. Aapne bahut samay se ruka hua kaam bana diya. Aapne jo bataya or jis tarah se samjhaya, my wife and my daughter dono hi santusht hain. Ek baar fir se aapka shukriya ada karta hu.",
@@ -180,6 +186,7 @@ export const REVIEWS: ReviewItem[] = [
   },
   {
     id: "review-mukul",
+    category: "tarot",
     clientName: "Mukul",
     roleOrNote: "Tarot Client",
     text: "मुक्ता जी, आपने, जो Tarot Card Reading से अपना क़ीमती समय निकाल कर, धैर्य और संयम के साथ बताया, समझाया, उसके लिए मैं और मेरा परिवार आपके आभारी रहेंगे। आने वाले वक़्त के साथ मैं स्वयं देख रही हूँ कि आपकी बतायी बातें सही साबित हो रही हैं। आपकी रायें और सुझावों को हम दिल ❤️ से मानेंगे। आपका शुक्रिया।",
@@ -189,6 +196,7 @@ export const REVIEWS: ReviewItem[] = [
   },
   {
     id: "review-seeker",
+    category: "tarot",
     clientName: "Delhi Seeker",
     roleOrNote: "Session Client",
     text: "It was a pleasure meeting you and discussing my future aspirations. While talking to you I really felt very positive and even your card reading was very appropriate. I really appreciate the time you spent in explaining each card predictions and directions. I would love to take your guidance in future.",
@@ -197,11 +205,51 @@ export const REVIEWS: ReviewItem[] = [
   },
   {
     id: "review-followup",
+    category: "tarot",
     clientName: "Monthly Client",
     roleOrNote: "Counseling & Tarot",
     text: "Dear Mukta Mam, my session on Tarot was amazing and an eye opener too. My thoughts were messed up but after counseling I got clarity in my mind… Truly I will follow it and will meet again for the followup session after one month. Thanks again 😁🙏",
     highlight: "My thoughts were messed up but after counseling I got clarity in my mind.",
     themeColor: "maroon"
+  },
+
+  // --- Category: Cellular Health Reviews ---
+  {
+    id: "review-pooja-health",
+    category: "health",
+    clientName: "Pooja Sharma",
+    roleOrNote: "Cellular Health Client",
+    text: "Mukta ji’s cellular nutrition coaching transformed my daily energy levels. After suffering from chronic fatigue and digestive heaviness for months, her personalized nutrition roadmap and lifestyle guidance helped me recover natural vitality within weeks. Truly a compassionate healer!",
+    highlight: "Personalized nutrition roadmap and guidance helped me recover natural vitality within weeks.",
+    themeColor: "emerald"
+  },
+  {
+    id: "review-ananya-health",
+    category: "health",
+    clientName: "Ananya Deshmukh",
+    roleOrNote: "Holistic Nutrition Client",
+    text: "मुक्ता मैम की सेल्यूलर वेलनेस गाइडेंस ने मेरी लाइफस्टाइल बदल दी। उन्होंने खान-पान और प्राकृतिक आदतों को बहुत ही सरल तरीके से समझाया। मेरी एनर्जी और फिटनेस में जबरदस्त सुधार हुआ है। दिल से धन्यवाद मैम!",
+    highlight: "खान-पान और प्राकृतिक आदतों को बहुत ही सरल तरीके से समझाया... एनर्जी और फिटनेस में जबरदस्त सुधार।",
+    themeColor: "sage",
+    isHindi: true
+  },
+  {
+    id: "review-rajeev-health",
+    category: "health",
+    clientName: "Rajeev Malhotra",
+    roleOrNote: "Wellness & Lifestyle Coaching",
+    text: "The cellular detox and balanced meal approach recommended by Mukta ji was easy to follow and deeply effective. She doesn't just give a generic diet chart—she explains how food fuels our cells. Highly recommended for anyone wanting real, lasting health and wellbeing.",
+    highlight: "She doesn't just give a diet chart—she explains how food fuels our cells.",
+    themeColor: "emerald"
+  },
+  {
+    id: "review-sunita-health",
+    category: "health",
+    clientName: "Sunita Aggarwal",
+    roleOrNote: "Wellness & Immunity Client",
+    text: "After prolonged health struggles, Mukta ji guided me with such warmth and deep knowledge of cellular nutrition. Her tips for daily balance and natural immunity gave me newfound strength. Having overcome cancer herself, her advice carries immense wisdom and hope.",
+    highlight: "Warmth and deep knowledge of cellular nutrition gave me newfound strength and hope.",
+    themeColor: "sage"
   }
 ];
 
