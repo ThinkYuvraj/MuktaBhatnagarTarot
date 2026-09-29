@@ -278,7 +278,7 @@ export const Interactive3DCardCarousel: React.FC = () => {
                       </div>
 
                       <p className="text-xs text-white/75 leading-relaxed">
-                        Every consultation at GTB Enclave or via phone call includes tailored remedies designed to balance emotional peace and cellular wellness.
+                        Every consultation via phone call or WhatsApp includes tailored remedies designed to balance emotional peace and cellular wellness.
                       </p>
                     </div>
 

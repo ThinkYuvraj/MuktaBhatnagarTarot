@@ -45,24 +45,6 @@ export const Contact: React.FC = () => {
 
               {/* Rows */}
               <div className="w-full space-y-4 mb-6">
-                
-                {/* Address Row */}
-                <div className="flex items-start gap-4 pb-3.5 border-b border-[#3E2F3A]/8 text-xs sm:text-sm">
-                  <span className="w-20 text-[#3E2F3A]/60 font-medium shrink-0">Address</span>
-                  <div className="text-[#3E2F3A] font-medium leading-snug">
-                    <p>{PROFILE_INFO.address}</p>
-                    <a
-                      href={PROFILE_INFO.googleMapsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-xs text-[#E8912D] hover:underline mt-1 font-semibold"
-                    >
-                      <MapPin className="w-3.5 h-3.5" />
-                      <span>Open on Google Maps</span>
-                      <ExternalLink className="w-3 h-3 opacity-75" />
-                    </a>
-                  </div>
-                </div>
 
                 {/* Tarot Timings Row */}
                 <div className="flex items-center gap-4 pb-3.5 border-b border-[#3E2F3A]/8 text-xs sm:text-sm">

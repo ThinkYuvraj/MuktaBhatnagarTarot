@@ -25,8 +25,8 @@ const GALLERY_ITEMS: GalleryItem[] = [
   },
   {
     id: "delhi-sanctuary",
-    title: "Delhi Sanctuary & Consultation Space",
-    caption: "Peaceful atmosphere at 36-A, Pocket-A, MIG Flats, GTB Enclave, Delhi for in-person readings.",
+    title: "Sacred Sanctuary & Reading Space",
+    caption: "Peaceful, harmonious atmosphere designed for sacred tarot setup & holistic wellness consultations.",
     image: officeReadingPhoto,
     tag: "Reading Sanctuary",
     objectPos: "object-center"
@@ -95,7 +95,7 @@ export const Gallery: React.FC = () => {
             Inside the reading space
           </h2>
           <p className="text-xs sm:text-sm text-[#3E2F3A]/70 mt-1.5">
-            A peaceful atmosphere at 36-A, MIG Flats, GTB Enclave, Delhi for in-person readings and phone consultations.
+            A peaceful sanctuary designed for intuitive tarot readings and holistic wellness consultations.
           </p>
         </div>
 
@@ -251,7 +251,7 @@ export const Gallery: React.FC = () => {
                   {selectedPhoto.tag}
                 </span>
                 <span className="text-[#3E2F3A]/30">·</span>
-                <span className="text-xs text-[#3E2F3A]/60">Delhi Sanctuary</span>
+                <span className="text-xs text-[#3E2F3A]/60">Reading Sanctuary</span>
               </div>
               <h3 className="text-2xl font-serif text-[#3E2F3A] mb-2">
                 {selectedPhoto.title}

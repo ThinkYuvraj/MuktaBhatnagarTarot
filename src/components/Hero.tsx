@@ -48,11 +48,11 @@ export const Hero: React.FC = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#3E2F3A]/25 via-transparent to-transparent pointer-events-none" />
               </div>
 
-              {/* Badge: 6+ years · Delhi & online */}
+              {/* Badge: 6+ years · Online & Phone */}
               <div className="absolute bottom-4 -right-2 sm:-right-4 bg-white/95 backdrop-blur-md border border-[#C9A45C]/40 shadow-md shadow-[#3E2F3A]/10 px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full flex items-center gap-1.5 text-xs sm:text-sm font-medium text-[#3E2F3A] transition-transform">
                 <span className="font-bold text-[#E8912D]">6+ years</span>
                 <span className="text-[#C9A45C]">·</span>
-                <span className="text-[#3E2F3A]/85">Delhi & online</span>
+                <span className="text-[#3E2F3A]/85">Online & Phone</span>
               </div>
             </div>
           </div>
@@ -104,7 +104,7 @@ export const Hero: React.FC = () => {
             {/* Quick trust snippet */}
             <p className="text-xs sm:text-sm text-[#3E2F3A]/75 font-medium mt-3.5 sm:mt-5 flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>In-person at GTB Enclave, Delhi or over phone / WhatsApp call.</span>
+              <span>Available over Phone & WhatsApp call nationwide.</span>
             </p>
           </div>
 

@@ -49,14 +49,11 @@ export const PROFILE_INFO = {
   subtitle: "Helping you balance a healthy Mind, Body & Soul.",
   headline: "Seek Clarity,",
   headlineHighlight: "Find Answers.",
-  experience: "6+ years · Delhi & online",
+  experience: "6+ years · Online & Phone",
   phone: "9711241456",
   phoneFormatted: "97112 41456",
   email: "muktabhatnagar24sept@gmail.com",
   instagram: "muk.tarot1",
-  address: "36-A, Pocket-A, MIG Flats, GTB Enclave, Delhi 110093",
-  googleMapsUrl: "https://maps.app.goo.gl/aeRiF3EVdiJj7m9D8?g_st=ac",
-  plusCode: "M8R8+PH7 Delhi",
   timings: {
     tarot: "8:30 – 10:30 PM",
     wellness: "11:30 AM – 5:30 PM"
@@ -197,7 +194,7 @@ export const REVIEWS: ReviewItem[] = [
   {
     id: "review-seeker",
     category: "tarot",
-    clientName: "Delhi Seeker",
+    clientName: "Online Seeker",
     roleOrNote: "Session Client",
     text: "It was a pleasure meeting you and discussing my future aspirations. While talking to you I really felt very positive and even your card reading was very appropriate. I really appreciate the time you spent in explaining each card predictions and directions. I would love to take your guidance in future.",
     highlight: "Really felt very positive and appreciated the time spent explaining each card prediction.",
@@ -256,7 +253,7 @@ export const REVIEWS: ReviewItem[] = [
 export const FAQS: FaqItem[] = [
   {
     question: "How do I book a session with Mukta ji?",
-    answer: "You can book directly via WhatsApp or phone call at 97112 41456. Simply mention your preferred slot and whether you want an in-person session at her Delhi office (GTB Enclave) or an online phone session."
+    answer: "You can book directly via WhatsApp or phone call at 97112 41456. Simply mention your preferred slot for a voice call or WhatsApp consultation."
   },
   {
     question: "What are the session timings for Tarot and Wellness?",
@@ -267,12 +264,12 @@ export const FAQS: FaqItem[] = [
     answer: "Yes, every Tarot package (One Question, Two Questions, or Monthly Guidance) includes practical, gentle remedies and guidance alongside the card reading."
   },
   {
-    question: "Are phone/online readings as accurate as in-person sessions?",
-    answer: "Yes! Energy and intuition transcend distance. Many clients connect comfortably over voice call or WhatsApp from across India and experience the exact same accuracy and peace of mind."
+    question: "Are phone/online readings accurate?",
+    answer: "Yes! Energy and intuition transcend distance. Clients connect comfortably over voice call or WhatsApp from across India and experience the exact same accuracy and peace of mind."
   },
   {
     question: "What payment modes are accepted?",
-    answer: "You can easily pay via UPI, Paytm, or Cash at the GTB Enclave office. Details are shared during booking."
+    answer: "You can easily pay via UPI or Paytm. Payment details are shared during booking."
   }
 ];
 

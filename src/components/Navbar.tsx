@@ -82,7 +82,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPayment }) => {
     { 
       href: '#contact', 
       label: 'Book a Session', 
-      detail: 'GTB Enclave, Delhi & WhatsApp',
+      detail: 'Phone Call & WhatsApp',
       icon: <MapPin className="w-4 h-4 text-[#C9A45C]" />
     },
   ];
@@ -221,7 +221,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPayment }) => {
                 <Sparkles className="w-3.5 h-3.5 text-[#E8912D]" />
                 Explore Sections
               </span>
-              <span className="text-[#3E2F3A]/60">Delhi & Online</span>
+              <span className="text-[#3E2F3A]/60">Online & Phone</span>
             </div>
 
             {/* Menu Links with Rich Styling and Touch Targets */}
