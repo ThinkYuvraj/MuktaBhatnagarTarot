@@ -25,10 +25,10 @@ export const Hero: React.FC = () => {
         <Sun className="w-5 h-5" />
       </div>
 
-      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-6xl 2xl:max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Responsive Grid / Flex: Image on Left, Text Content on Right */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-14">
+        {/* Responsive Grid / Flex: Image on Left, Text Content on Right with closer spacing */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-4 sm:gap-6 md:gap-7 lg:gap-9 xl:gap-10">
           
           {/* Portrait container: Left on Tablet/Desktop */}
           <div className="order-1 md:order-1 w-full max-w-[300px] xs:max-w-[320px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[420px] xl:max-w-[460px] 2xl:max-w-[500px] flex justify-center shrink-0">
