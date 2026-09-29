@@ -24,13 +24,13 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="w-full flex justify-center py-16 sm:py-20 md:py-24 bg-[#F7EDE6]/50 border-t border-[#3E2F3A]/5 scroll-mt-24">
-      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+    <section id="contact" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#F7EDE6]/50 border-t border-[#3E2F3A]/5 scroll-mt-24">
+      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Main Contact Card */}
-        <div className="bg-[#FBF7F0] border border-[#3E2F3A]/10 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-sm mb-10">
+        <div className="bg-[#FBF7F0] border border-[#3E2F3A]/10 rounded-3xl p-5 sm:p-7 lg:p-9 shadow-sm mb-6 sm:mb-8">
           
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-8 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 lg:gap-10 items-start">
             
             {/* Left Column: Details */}
             <div className="md:col-span-6 lg:col-span-6 flex flex-col items-start">
@@ -39,12 +39,12 @@ export const Contact: React.FC = () => {
                 Visit or Connect
               </span>
 
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mb-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mb-4 sm:mb-5">
                 Book a session
               </h2>
 
               {/* Rows matching mockup */}
-              <div className="w-full space-y-4 mb-6">
+              <div className="w-full space-y-3.5 mb-5">
                 
                 {/* Address Row */}
                 <div className="flex items-start gap-4 pb-3.5 border-b border-[#3E2F3A]/8 text-xs sm:text-sm">

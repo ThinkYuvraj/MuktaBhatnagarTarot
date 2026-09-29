@@ -10,18 +10,18 @@ export const FaqSection: React.FC = () => {
   };
 
   return (
-    <section className="w-full flex justify-center py-16 sm:py-20 md:py-24 bg-[#F7EDE6]/30 border-t border-[#3E2F3A]/5">
-      <div className="max-w-5xl 2xl:max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+    <section className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#F7EDE6]/30 border-t border-[#3E2F3A]/5">
+      <div className="max-w-5xl 2xl:max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center mb-10 sm:mb-12">
+        <div className="text-center mb-6 sm:mb-8">
           <span className="text-xs font-semibold tracking-widest uppercase text-[#C9A45C]">
             Questions & Answers
           </span>
-          <h2 className="text-3xl sm:text-4xl font-serif text-[#3E2F3A] mt-2">
+          <h2 className="text-3xl sm:text-4xl font-serif text-[#3E2F3A] mt-1.5">
             Frequently Asked
           </h2>
-          <p className="text-sm text-[#3E2F3A]/70 mt-2">
+          <p className="text-sm text-[#3E2F3A]/70 mt-1.5">
             Everything you need to know about preparing for your session.
           </p>
         </div>

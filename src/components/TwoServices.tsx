@@ -4,24 +4,24 @@ import { Check, Clock, ArrowRight } from 'lucide-react';
 
 export const TwoServices: React.FC = () => {
   return (
-    <section id="services" className="w-full flex justify-center py-16 sm:py-20 md:py-24 bg-[#FBF7F0] scroll-mt-24">
-      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+    <section id="services" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#FBF7F0] scroll-mt-24">
+      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
           <span className="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#C9A45C]">
             How I Can Help
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mt-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mt-1.5">
             Two ways to feel better
           </h2>
-          <p className="text-sm sm:text-base lg:text-lg text-[#3E2F3A]/75 mt-2">
+          <p className="text-sm sm:text-base lg:text-lg text-[#3E2F3A]/75 mt-1.5">
             Balancing inner clarity and physical wellness for a grounded, empowered life.
           </p>
         </div>
 
         {/* Two Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 xl:gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6 lg:gap-8">
           
           {SERVICES_OVERVIEW.map((service) => {
             const isTarot = service.id === 'tarot';
@@ -38,7 +38,7 @@ export const TwoServices: React.FC = () => {
               <div
                 key={service.id}
                 id={service.id === 'wellness' ? 'wellness' : undefined}
-                className={`${cardBg} ${borderCol} border rounded-3xl p-6 sm:p-8 lg:p-10 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#3E2F3A]/10 group scroll-mt-24`}
+                className={`${cardBg} ${borderCol} border rounded-3xl p-5 sm:p-7 lg:p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-[#3E2F3A]/10 group scroll-mt-24`}
               >
                 <div>
                   {/* Category Pill / Kicker */}

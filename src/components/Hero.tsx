@@ -5,7 +5,7 @@ import muktaMainPhoto from '../assets/images/mukta_saree_reading_1790319437505.j
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative w-full flex items-center justify-center overflow-hidden py-10 sm:py-16 md:py-20 lg:py-24 2xl:py-28 min-h-[calc(100vh-5rem)]">
+    <section className="relative w-full flex items-center justify-center overflow-hidden py-8 sm:py-12 md:py-14 lg:py-16">
       
       {/* Background Decorative Animated Celestial Glow Rings */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[800px] lg:w-[1000px] xl:w-[1200px] h-[600px] sm:h-[800px] lg:h-[1000px] xl:h-[1200px] pointer-events-none -z-10 opacity-35">
@@ -25,10 +25,10 @@ export const Hero: React.FC = () => {
         <Sun className="w-5 h-5" />
       </div>
 
-      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12 relative z-10">
+      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Responsive Grid / Flex: Image on Left, Text Content on Right */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 sm:gap-10 md:gap-10 lg:gap-16 xl:gap-20">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 sm:gap-8 md:gap-10 lg:gap-14">
           
           {/* Portrait container: Left on Tablet/Desktop */}
           <div className="order-1 md:order-1 w-full max-w-[300px] xs:max-w-[320px] sm:max-w-[350px] md:max-w-[360px] lg:max-w-[420px] xl:max-w-[460px] 2xl:max-w-[500px] flex justify-center shrink-0">

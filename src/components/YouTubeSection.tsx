@@ -6,20 +6,20 @@ export const YouTubeSection: React.FC = () => {
   const embedUrl = "https://www.youtube.com/embed/j2KgHLGKFPM";
 
   return (
-    <section id="videos" className="w-full flex justify-center py-16 sm:py-20 md:py-24 bg-[#F7EDE6]/40 border-y border-[#3E2F3A]/5 scroll-mt-24">
-      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+    <section id="videos" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#F7EDE6]/40 border-y border-[#3E2F3A]/5 scroll-mt-24">
+      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBF7F0] border border-[#C9A45C]/30 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#C9A45C] mb-3 shadow-xs">
+        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FBF7F0] border border-[#C9A45C]/30 text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#C9A45C] mb-2.5 shadow-xs">
             <Youtube className="w-4 h-4 text-[#FF0000]" />
             <span>Featured Video</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mt-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mt-1.5">
             Watch Mukta Ji in Action
           </h2>
-          <p className="text-xs sm:text-sm md:text-base text-[#3E2F3A]/75 mt-2 max-w-xl mx-auto">
+          <p className="text-xs sm:text-sm md:text-base text-[#3E2F3A]/75 mt-1.5 max-w-xl mx-auto">
             Explore deep insights, card interpretations, and intuitive spiritual guidance directly through our video session.
           </p>
         </div>

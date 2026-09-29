@@ -39,18 +39,18 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenPaymentModal }) => {
   };
 
   return (
-    <section id="pricing" className="w-full flex justify-center py-16 sm:py-20 md:py-24 bg-[#F7EDE6]/50 border-y border-[#3E2F3A]/5 scroll-mt-24">
-      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
+    <section id="pricing" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#F7EDE6]/50 border-y border-[#3E2F3A]/5 scroll-mt-24">
+      <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
+        <div className="text-center max-w-xl mx-auto mb-6 sm:mb-8">
           <span className="text-xs font-semibold tracking-widest uppercase text-[#C9A45C]">
             Consultation Packages
           </span>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mt-2">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mt-1.5">
             Book Your Consultation
           </h2>
-          <p className="text-xs sm:text-sm text-[#3E2F3A]/70 mt-2">
+          <p className="text-xs sm:text-sm text-[#3E2F3A]/70 mt-1.5">
             Choose your consultation package for intuitive tarot guidance, personalized remedies, and spiritual clarity.
           </p>
         </div>

@@ -7,33 +7,33 @@ interface StoryProps {
 
 export const Story: React.FC<StoryProps> = ({ onOpenFullStory }) => {
   return (
-    <section id="about" className="w-full flex justify-center py-16 sm:py-20 md:py-24 bg-[#FBF7F0] scroll-mt-24">
+    <section id="about" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#FBF7F0] scroll-mt-24">
       <div className="max-w-5xl 2xl:max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Story Card Container */}
-        <div className="bg-white/80 backdrop-blur-sm border border-[#3E2F3A]/10 rounded-3xl p-8 sm:p-12 lg:p-16 shadow-lg shadow-[#3E2F3A]/5 flex flex-col items-center text-center relative overflow-hidden">
+        <div className="bg-white/80 backdrop-blur-sm border border-[#3E2F3A]/10 rounded-3xl p-6 sm:p-8 lg:p-10 shadow-md shadow-[#3E2F3A]/5 flex flex-col items-center text-center relative overflow-hidden">
           
           {/* Subtle Background Glow Accent */}
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-32 bg-gradient-to-b from-[#B9A6D6]/20 via-[#F7EDE6]/30 to-transparent blur-2xl pointer-events-none" />
 
           {/* Kicker */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F7EDE6] text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#C9A45C] mb-4 shadow-xs">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F7EDE6] text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#C9A45C] mb-3 shadow-xs">
             <Sparkles className="w-3.5 h-3.5 text-[#E8912D]" />
             <span>My Story</span>
           </div>
 
           {/* Headline */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mb-5 max-w-2xl">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mb-3.5 max-w-2xl">
             Young at heart, here to help.
           </h2>
 
           {/* Story Narrative */}
-          <p className="text-base sm:text-lg lg:text-xl text-[#3E2F3A]/85 leading-relaxed mb-8 max-w-3xl font-normal">
+          <p className="text-base sm:text-lg lg:text-xl text-[#3E2F3A]/85 leading-relaxed mb-6 max-w-3xl font-normal">
             “A breast cancer survivor (2010), I healed by learning nutrition and health. Today I share what I learnt, through tarot and wellness coaching to help you find balance for your Mind, Body & Soul.”
           </p>
 
           {/* Qualification Chips */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-9">
+          <div className="flex flex-wrap items-center justify-center gap-2.5 mb-6">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#FBF7F0] border border-[#3E2F3A]/15 text-xs sm:text-sm font-medium text-[#3E2F3A] shadow-xs hover:border-[#E8912D] hover:scale-105 transition-all">
               <Award className="w-4 h-4 text-[#E8912D]" />
               <span>Certified Tarot Reader – Occult Academy</span>
