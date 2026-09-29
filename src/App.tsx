@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 import { PageLoader } from './components/PageLoader';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
+import { YouTubeSection } from './components/YouTubeSection';
 import { TwoServices } from './components/TwoServices';
 import { Pricing } from './components/Pricing';
 import { Story } from './components/Story';
@@ -39,30 +40,33 @@ export default function App() {
       {/* 1. Header & Navigation */}
       <Navbar onOpenPayment={() => handleOpenPayment()} />
 
-      {/* Main Content Sections: Each stretched full width and centered in display */}
+      {/* Main Content Sections: Reordered per user flow */}
       <main className="w-full flex-grow flex flex-col items-center">
         {/* 1. Top Hero: photo, "Seek Clarity, Find Answers", WhatsApp + Call buttons */}
         <Hero />
 
-        {/* 2. Two services: Tarot Guidance (lavender) and Health & Wellness (sage), with timings */}
-        <TwoServices />
-
-        {/* 3. Tarot prices: ₹1,100 • ₹2,100 • ₹5,100 */}
-        <Pricing onOpenPaymentModal={handleOpenPayment} />
-
-        {/* 4. My story: 3–4 lines + qualification chips + “Read full story” */}
-        <Story onOpenFullStory={() => setIsStoryModalOpen(true)} />
-
-        {/* 5. Reviews: actual testimonial poster cards */}
+        {/* 2. Reviews: actual testimonial poster cards */}
         <Reviews />
 
-        {/* 6. Gallery: office session & tarot setup photos */}
+        {/* 3. My Story: 3–4 lines + qualification chips + “Read full story” */}
+        <Story onOpenFullStory={() => setIsStoryModalOpen(true)} />
+
+        {/* 4. Services: Tarot Guidance and Health & Wellness */}
+        <TwoServices />
+
+        {/* 5. YouTube Video: featured reading and insights */}
+        <YouTubeSection />
+
+        {/* 6. Book Your Consultation / Pricing packages */}
+        <Pricing onOpenPaymentModal={handleOpenPayment} />
+
+        {/* 7. Gallery: sanctuary, altar & reading setup */}
         <Gallery />
 
-        {/* 7. Contact: address, timings, phone, WhatsApp, Google Map */}
+        {/* 8. Book a Session / Contact */}
         <Contact />
 
-        {/* Spiritual Insights & FAQ sections (Minimalist & Clean) */}
+        {/* Spiritual Insights & FAQ sections */}
         <SpiritualInsights />
         <FaqSection />
       </main>

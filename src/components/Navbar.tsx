@@ -14,7 +14,8 @@ import {
   Tag,
   Star,
   MapPin,
-  Clock
+  Clock,
+  Youtube
 } from 'lucide-react';
 
 interface NavbarProps {
@@ -49,6 +50,12 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPayment }) => {
 
   const navLinks = [
     { 
+      href: '#reviews', 
+      label: 'Client Reviews', 
+      detail: 'Verified feedback & testimonials',
+      icon: <Star className="w-4 h-4 text-[#E8912D]" />
+    },
+    { 
       href: '#about', 
       label: 'About Mukta Ji', 
       detail: 'Cancer survivor story & 6+ yrs wisdom',
@@ -56,32 +63,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPayment }) => {
     },
     { 
       href: '#services', 
-      label: 'Tarot Guidance', 
-      detail: 'Clarity for love, career & abundance',
+      label: 'Tarot & Wellness', 
+      detail: 'Clarity for love, career & wellness',
       icon: <Compass className="w-4 h-4 text-[#876EB2]" />
     },
     { 
-      href: '#wellness', 
-      label: 'Cellular Wellness', 
-      detail: 'Holistic health & nutrition coaching',
-      icon: <HeartPulse className="w-4 h-4 text-[#5B8556]" />
+      href: '#videos', 
+      label: 'Watch Video', 
+      detail: 'Featured reading & sacred insights',
+      icon: <Youtube className="w-4 h-4 text-[#FF0000]" />
     },
     { 
       href: '#pricing', 
-      label: 'Tarot Packages', 
+      label: 'Book Consultation', 
       detail: '₹1,100 · ₹2,100 · ₹5,100',
       icon: <Tag className="w-4 h-4 text-[#E8912D]" />
     },
     { 
-      href: '#reviews', 
-      label: 'Client Reviews', 
-      detail: 'Verified feedback & testimonials',
-      icon: <Star className="w-4 h-4 text-[#E8912D]" />
-    },
-    { 
       href: '#contact', 
-      label: 'Visit or Connect', 
-      detail: 'GTB Enclave, Delhi & Phone Call',
+      label: 'Book a Session', 
+      detail: 'GTB Enclave, Delhi & WhatsApp',
       icon: <MapPin className="w-4 h-4 text-[#C9A45C]" />
     },
   ];

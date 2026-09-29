@@ -45,13 +45,13 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenPaymentModal }) => {
         {/* Section Heading */}
         <div className="text-center max-w-xl mx-auto mb-8 sm:mb-12">
           <span className="text-xs font-semibold tracking-widest uppercase text-[#C9A45C]">
-            Tarot Packages
+            Consultation Packages
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mt-2">
-            Simple, clear pricing
+            Book Your Consultation
           </h2>
           <p className="text-xs sm:text-sm text-[#3E2F3A]/70 mt-2">
-            Transparent remedies and intuitive insights with no hidden terms.
+            Choose your consultation package for intuitive tarot guidance, personalized remedies, and spiritual clarity.
           </p>
         </div>
 

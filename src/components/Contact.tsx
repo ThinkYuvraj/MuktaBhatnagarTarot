@@ -40,7 +40,7 @@ export const Contact: React.FC = () => {
               </span>
 
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#3E2F3A] mb-6">
-                Let's talk
+                Book a session
               </h2>
 
               {/* Rows matching mockup */}

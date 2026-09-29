@@ -41,6 +41,13 @@ export const Footer: React.FC = () => {
           {/* Quick Nav Mirror with smooth header-offset scroll */}
           <nav className="flex flex-wrap items-center justify-center gap-6 text-xs text-[#3E2F3A]/80 font-medium">
             <a 
+              href="#reviews" 
+              onClick={(e) => scrollToSection(e, '#reviews')}
+              className="hover:text-[#E8912D] transition-colors"
+            >
+              Reviews
+            </a>
+            <a 
               href="#about" 
               onClick={(e) => scrollToSection(e, '#about')}
               className="hover:text-[#E8912D] transition-colors"
@@ -52,35 +59,28 @@ export const Footer: React.FC = () => {
               onClick={(e) => scrollToSection(e, '#services')}
               className="hover:text-[#E8912D] transition-colors"
             >
-              Tarot
+              Services
             </a>
             <a 
-              href="#wellness" 
-              onClick={(e) => scrollToSection(e, '#wellness')}
+              href="#videos" 
+              onClick={(e) => scrollToSection(e, '#videos')}
               className="hover:text-[#E8912D] transition-colors"
             >
-              Wellness
+              Video
             </a>
             <a 
               href="#pricing" 
               onClick={(e) => scrollToSection(e, '#pricing')}
               className="hover:text-[#E8912D] transition-colors"
             >
-              Pricing
-            </a>
-            <a 
-              href="#reviews" 
-              onClick={(e) => scrollToSection(e, '#reviews')}
-              className="hover:text-[#E8912D] transition-colors"
-            >
-              Reviews
+              Book Consultation
             </a>
             <a 
               href="#contact" 
               onClick={(e) => scrollToSection(e, '#contact')}
               className="hover:text-[#E8912D] transition-colors"
             >
-              Contact
+              Book a Session
             </a>
           </nav>
         </div>
