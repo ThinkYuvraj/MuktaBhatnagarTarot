@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Youtube, ExternalLink, Sparkles, Play } from 'lucide-react';
+import youtubeThumbnail from '../assets/images/youtube_thumbnail.jpg';
 
 export const YouTubeSection: React.FC = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
   const videoUrl = "https://youtu.be/j2KgHLGKFPM?si=A_Juc-vo797zJjNM";
-  const embedUrl = "https://www.youtube.com/embed/j2KgHLGKFPM";
+  const embedUrl = "https://www.youtube.com/embed/j2KgHLGKFPM?autoplay=1&rel=0";
 
   return (
     <section id="videos" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#F7EDE6]/40 border-y border-[#3E2F3A]/5 scroll-mt-24">
@@ -33,13 +35,37 @@ export const YouTubeSection: React.FC = () => {
             
             {/* 16:9 Aspect Ratio Container */}
             <div className="relative w-full aspect-video rounded-xl sm:rounded-2xl overflow-hidden bg-black shadow-inner">
-              <iframe
-                src={embedUrl}
-                title="Tarot Reading & Spiritual Guidance with Mukta Bhatnagar"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full border-0"
-              />
+              {isPlaying ? (
+                <iframe
+                  src={embedUrl}
+                  title="Tarot Reading & Spiritual Guidance with Mukta Bhatnagar"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className="absolute inset-0 w-full h-full border-0"
+                />
+              ) : (
+                <div 
+                  onClick={() => setIsPlaying(true)}
+                  className="relative w-full h-full cursor-pointer group/thumb select-none"
+                  title="Click to play video"
+                >
+                  <img
+                    src={youtubeThumbnail}
+                    alt="Mukta Bhatnagar - मन की बात सबके साथ"
+                    className="w-full h-full object-cover group-hover/thumb:scale-102 transition-transform duration-500"
+                  />
+                  
+                  {/* Soft overlay scrim */}
+                  <div className="absolute inset-0 bg-black/15 group-hover/thumb:bg-black/5 transition-colors duration-300" />
+                  
+                  {/* Play Button Overlay */}
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-[#FF0000] text-white flex items-center justify-center shadow-2xl group-hover/thumb:scale-110 active:scale-95 transition-all duration-300 ring-4 ring-white/30">
+                      <Play className="w-7 h-7 sm:w-9 sm:h-9 fill-white translate-x-0.5" />
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
