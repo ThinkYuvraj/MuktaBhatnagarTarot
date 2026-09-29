@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react';
 import { REVIEWS } from '../data/content';
-import { Sparkles, ChevronLeft, ChevronRight, MessageSquareHeart, HeartPulse, Compass, Star, ShieldCheck, Pause, Play } from 'lucide-react';
+import { Sparkles, MessageSquareHeart, HeartPulse, Compass, Star, ShieldCheck } from 'lucide-react';
 import muktaStoryPhoto from '../assets/images/mukta_saree_reading_1790319437505.jpg';
 
 export const Reviews: React.FC = () => {
@@ -8,9 +8,10 @@ export const Reviews: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [itemsPerView, setItemsPerView] = useState(3);
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
   
-  const touchStartX = useRef<number | null>(null);
-  const touchEndX = useRef<number | null>(null);
+  const startXRef = useRef<number | null>(null);
   const autoplayTimerRef = useRef<NodeJS.Timeout | null>(null);
 
   const tarotCount = useMemo(() => REVIEWS.filter(r => r.category === 'tarot').length, []);
@@ -51,6 +52,7 @@ export const Reviews: React.FC = () => {
   const handleCategoryChange = (cat: 'tarot' | 'health') => {
     setSelectedCategory(cat);
     setCurrentIndex(0);
+    setDragOffset(0);
   };
 
   const handleNext = useCallback(() => {
@@ -61,9 +63,9 @@ export const Reviews: React.FC = () => {
     setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
   }, [maxIndex]);
 
-  // Auto swipe timer (every 4.5 seconds, pauses when user hovers or touches)
+  // Auto swipe timer (every 4.5 seconds, pauses when user hovers, touches, or drags)
   useEffect(() => {
-    if (isPaused || filteredReviews.length <= itemsPerView) {
+    if (isPaused || isDragging || filteredReviews.length <= itemsPerView) {
       if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current);
       return;
     }
@@ -75,25 +77,70 @@ export const Reviews: React.FC = () => {
     return () => {
       if (autoplayTimerRef.current) clearInterval(autoplayTimerRef.current);
     };
-  }, [isPaused, handleNext, filteredReviews.length, itemsPerView]);
+  }, [isPaused, isDragging, handleNext, filteredReviews.length, itemsPerView]);
 
-  const onTouchStart = (e: React.TouchEvent) => {
+  // Touch Swipe Handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
     setIsPaused(true);
-    touchStartX.current = e.targetTouches[0].clientX;
+    setIsDragging(true);
+    startXRef.current = e.targetTouches[0].clientX;
   };
 
-  const onTouchMove = (e: React.TouchEvent) => {
-    touchEndX.current = e.targetTouches[0].clientX;
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (startXRef.current === null) return;
+    const currentX = e.targetTouches[0].clientX;
+    const diff = currentX - startXRef.current;
+    setDragOffset(diff);
   };
 
-  const onTouchEnd = () => {
+  const handleTouchEnd = () => {
     setIsPaused(false);
-    if (!touchStartX.current || !touchEndX.current) return;
-    const diff = touchStartX.current - touchEndX.current;
-    if (diff > 45) handleNext();
-    if (diff < -45) handlePrev();
-    touchStartX.current = null;
-    touchEndX.current = null;
+    setIsDragging(false);
+    if (startXRef.current === null) return;
+    
+    if (dragOffset < -40) {
+      handleNext();
+    } else if (dragOffset > 40) {
+      handlePrev();
+    }
+    
+    startXRef.current = null;
+    setDragOffset(0);
+  };
+
+  // Mouse Drag Swipe Handlers (Desktop swipe)
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setIsPaused(true);
+    setIsDragging(true);
+    startXRef.current = e.clientX;
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || startXRef.current === null) return;
+    const diff = e.clientX - startXRef.current;
+    setDragOffset(diff);
+  };
+
+  const handleMouseUp = () => {
+    if (!isDragging) return;
+    setIsPaused(false);
+    setIsDragging(false);
+    
+    if (dragOffset < -40) {
+      handleNext();
+    } else if (dragOffset > 40) {
+      handlePrev();
+    }
+    
+    startXRef.current = null;
+    setDragOffset(0);
+  };
+
+  const handleMouseLeave = () => {
+    if (isDragging) {
+      handleMouseUp();
+    }
+    setIsPaused(false);
   };
 
   return (
@@ -101,7 +148,7 @@ export const Reviews: React.FC = () => {
       id="reviews" 
       className="w-full flex justify-center py-16 sm:py-20 md:py-24 bg-[#F7EDE6]/40 border-y border-[#3E2F3A]/5 scroll-mt-24 select-none"
       onMouseEnter={() => setIsPaused(true)}
-      onMouseLeave={() => setIsPaused(false)}
+      onMouseLeave={handleMouseLeave}
     >
       <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8 2xl:px-12">
         
@@ -157,38 +204,23 @@ export const Reviews: React.FC = () => {
           </div>
         </div>
 
-        {/* AUTO-SWIPE CAROUSEL CONTAINER */}
-        <div className="relative group/carousel px-2 sm:px-6 lg:px-10">
+        {/* SWIPE CAROUSEL CONTAINER (No Caret Buttons) */}
+        <div className="relative group/carousel px-1 sm:px-3">
           
-          {/* Caret Navigation Button - LEFT */}
-          <button
-            onClick={handlePrev}
-            className="absolute left-0 sm:-left-2 lg:-left-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/95 hover:bg-white text-[#3E2F3A] border border-[#3E2F3A]/15 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-            aria-label="Previous review"
-          >
-            <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6 text-[#3E2F3A]" />
-          </button>
-
-          {/* Caret Navigation Button - RIGHT */}
-          <button
-            onClick={handleNext}
-            className="absolute right-0 sm:-right-2 lg:-right-4 top-1/2 -translate-y-1/2 z-20 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/95 hover:bg-white text-[#3E2F3A] border border-[#3E2F3A]/15 flex items-center justify-center shadow-lg hover:shadow-xl hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer"
-            aria-label="Next review"
-          >
-            <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6 text-[#3E2F3A]" />
-          </button>
-
-          {/* Carousel Viewport */}
+          {/* Carousel Viewport with Grab Cursor & Smooth Drag */}
           <div 
-            className="overflow-hidden py-4"
-            onTouchStart={onTouchStart}
-            onTouchMove={onTouchMove}
-            onTouchEnd={onTouchEnd}
+            className={`overflow-hidden py-4 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+            onMouseDown={handleMouseDown}
+            onMouseMove={handleMouseMove}
+            onMouseUp={handleMouseUp}
           >
             <div 
-              className="flex transition-transform duration-600 ease-[cubic-bezier(0.25,1,0.5,1)]"
+              className={`flex ${isDragging ? 'transition-none' : 'transition-transform duration-600 ease-[cubic-bezier(0.25,1,0.5,1)]'}`}
               style={{
-                transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`,
+                transform: `translateX(calc(-${currentIndex * (100 / itemsPerView)}% + ${dragOffset}px))`,
               }}
             >
               {filteredReviews.map((rev) => {
@@ -270,13 +302,15 @@ export const Reviews: React.FC = () => {
             </div>
           </div>
 
-          {/* CAROUSEL BOTTOM CONTROLS (Pagination Dots & Auto-swipe indicator) */}
+          {/* CAROUSEL BOTTOM CONTROLS & SWIPE HINT */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mt-6 px-2">
             
-            {/* Auto-swipe status badge */}
+            {/* Auto-swipe status badge & gesture hint */}
             <div className="flex items-center gap-2 text-xs text-[#3E2F3A]/60 font-medium">
-              <span className={`w-2 h-2 rounded-full ${isPaused ? 'bg-amber-400' : 'bg-emerald-500 animate-pulse'}`} />
-              <span>{isPaused ? 'Auto-swipe paused (hovering)' : 'Auto-swiping every 4.5s'}</span>
+              <span className={`w-2 h-2 rounded-full ${isPaused || isDragging ? 'bg-amber-400' : 'bg-emerald-500 animate-pulse'}`} />
+              <span>{isDragging ? 'Dragging...' : isPaused ? 'Paused' : 'Auto-swiping every 4.5s'}</span>
+              <span className="text-[#3E2F3A]/40 hidden sm:inline">·</span>
+              <span className="text-[#3E2F3A]/50 hidden sm:inline">Swipe or drag left/right to browse</span>
             </div>
 
             {/* Pagination Bullet Dots */}
