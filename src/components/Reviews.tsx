@@ -5,7 +5,6 @@ import muktaStoryPhoto from '../assets/images/mukta_saree_reading_1790319437505.
 
 export const Reviews: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<'tarot' | 'health'>('tarot');
-  const [languageFilter, setLanguageFilter] = useState<'all' | 'hindi'>('all');
   const [mobileIndex, setMobileIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
@@ -14,12 +13,8 @@ export const Reviews: React.FC = () => {
   const healthCount = useMemo(() => REVIEWS.filter(r => r.category === 'health').length, []);
 
   const filteredReviews = useMemo(() => {
-    return REVIEWS.filter((item) => {
-      if (item.category !== selectedCategory) return false;
-      if (languageFilter === 'hindi') return item.isHindi;
-      return true;
-    });
-  }, [selectedCategory, languageFilter]);
+    return REVIEWS.filter((item) => item.category === selectedCategory);
+  }, [selectedCategory]);
 
   const handleCategoryChange = (cat: 'tarot' | 'health') => {
     setSelectedCategory(cat);
@@ -105,36 +100,6 @@ export const Reviews: React.FC = () => {
               }`}>
                 {healthCount}
               </span>
-            </button>
-          </div>
-
-          {/* Sub Language Filter */}
-          <div className="flex items-center justify-center gap-2 mt-4">
-            <button
-              onClick={() => {
-                setLanguageFilter('all');
-                setMobileIndex(0);
-              }}
-              className={`px-3 py-1 rounded-full text-[11px] sm:text-xs font-medium transition-all ${
-                languageFilter === 'all'
-                  ? 'bg-[#C9A45C] text-white shadow-xs'
-                  : 'bg-white/60 text-[#3E2F3A]/60 hover:text-[#3E2F3A]'
-              }`}
-            >
-              All Feedback
-            </button>
-            <button
-              onClick={() => {
-                setLanguageFilter('hindi');
-                setMobileIndex(0);
-              }}
-              className={`px-3 py-1 rounded-full text-[11px] sm:text-xs font-medium transition-all ${
-                languageFilter === 'hindi'
-                  ? 'bg-[#C9A45C] text-white shadow-xs'
-                  : 'bg-white/60 text-[#3E2F3A]/60 hover:text-[#3E2F3A]'
-              }`}
-            >
-              Hindi Reviews
             </button>
           </div>
         </div>
