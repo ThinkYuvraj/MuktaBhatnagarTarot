@@ -62,16 +62,16 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenPayment }) => {
       icon: <BookOpen className="w-4 h-4 text-[#C9A45C]" />
     },
     { 
-      href: '#services', 
-      label: 'Tarot & Wellness', 
-      detail: 'Clarity for love, career & wellness',
-      icon: <Compass className="w-4 h-4 text-[#876EB2]" />
-    },
-    { 
       href: '#videos', 
       label: 'Watch Video', 
       detail: 'Featured reading & sacred insights',
       icon: <Youtube className="w-4 h-4 text-[#FF0000]" />
+    },
+    { 
+      href: '#services', 
+      label: 'Tarot & Wellness', 
+      detail: 'Clarity for love, career & wellness',
+      icon: <Compass className="w-4 h-4 text-[#876EB2]" />
     },
     { 
       href: '#pricing', 

@@ -7,7 +7,6 @@ import React, { useState } from 'react';
 import { PageLoader } from './components/PageLoader';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { YouTubeSection } from './components/YouTubeSection';
 import { TwoServices } from './components/TwoServices';
 import { Pricing } from './components/Pricing';
 import { Story } from './components/Story';
@@ -48,22 +47,19 @@ export default function App() {
         {/* 2. Reviews: actual testimonial poster cards */}
         <Reviews />
 
-        {/* 3. My Story: 3–4 lines + qualification chips + “Read full story” */}
+        {/* 3. My Story & Featured Video: side-by-side (Story on left, YouTube on right) */}
         <Story onOpenFullStory={() => setIsStoryModalOpen(true)} />
 
         {/* 4. Services: Tarot Guidance and Health & Wellness */}
         <TwoServices />
 
-        {/* 5. YouTube Video: featured reading and insights */}
-        <YouTubeSection />
+        {/* 5. Gallery: Inside the reading space (sanctuary, altar & reading setup) */}
+        <Gallery />
 
         {/* 6. Book Your Consultation / Pricing packages */}
         <Pricing onOpenPaymentModal={handleOpenPayment} />
 
-        {/* 7. Gallery: sanctuary, altar & reading setup */}
-        <Gallery />
-
-        {/* 8. Book a Session / Contact */}
+        {/* 7. Book a Session / Contact */}
         <Contact />
 
         {/* Spiritual Insights & FAQ sections */}

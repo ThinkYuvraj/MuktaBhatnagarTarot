@@ -39,7 +39,7 @@ export const Pricing: React.FC<PricingProps> = ({ onOpenPaymentModal }) => {
   };
 
   return (
-    <section id="pricing" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#F7EDE6]/50 border-y border-[#3E2F3A]/5 scroll-mt-24">
+    <section id="pricing" className="w-full flex justify-center py-8 sm:py-10 md:py-12 lg:py-14 bg-[#FBF7F0] scroll-mt-24">
       <div className="max-w-7xl 2xl:max-w-[1500px] w-full mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}

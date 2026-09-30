@@ -55,18 +55,18 @@ export const Footer: React.FC = () => {
               About
             </a>
             <a 
-              href="#services" 
-              onClick={(e) => scrollToSection(e, '#services')}
-              className="hover:text-[#E8912D] transition-colors"
-            >
-              Services
-            </a>
-            <a 
               href="#videos" 
               onClick={(e) => scrollToSection(e, '#videos')}
               className="hover:text-[#E8912D] transition-colors"
             >
               Video
+            </a>
+            <a 
+              href="#services" 
+              onClick={(e) => scrollToSection(e, '#services')}
+              className="hover:text-[#E8912D] transition-colors"
+            >
+              Services
             </a>
             <a 
               href="#pricing" 
