@@ -39,7 +39,7 @@ export const Hero: React.FC = () => {
                 <img
                   src={muktaMainPhoto}
                   alt="Mukta Bhatnagar - Tarot Reader and Cellular Health Coach"
-                  className="w-full h-full object-cover object-top group-hover:scale-103 transition-transform duration-700 ease-out"
+                  className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
                   loading="eager"
                 />
@@ -67,14 +67,14 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-3.5xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-normal text-[#3E2F3A] leading-[1.12] tracking-tight mb-4 sm:mb-5 text-balance">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-serif font-normal text-[#3E2F3A] leading-[1.12] tracking-tight mb-4 sm:mb-5 text-balance">
               Seek Clarity, <br />
               <span className="font-serif italic text-[#E8912D] underline decoration-[#C9A45C]/40 underline-offset-8">Find Answers.</span>
             </h1>
 
             {/* 1-2 lines subtext */}
             <p className="text-sm xs:text-base sm:text-lg xl:text-xl text-[#3E2F3A]/90 font-normal leading-relaxed mb-6 sm:mb-9 max-w-md lg:max-w-lg xl:max-w-xl">
-              Helping you balance a healthy Mind, Body & Soul with practical guidance and effective remedies.
+              Helping you to balance a healthy Mind, Body & Soul with practical guidance and effective remedies.
             </p>
 
             {/* CTA Buttons */}

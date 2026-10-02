@@ -53,6 +53,8 @@ export const PROFILE_INFO = {
   phone: "9711241456",
   phoneFormatted: "97112 41456",
   email: "muktabhatnagar24sept@gmail.com",
+  instagramTarot: "muk.tarot1",
+  instagramNutrition: "mukta.bhatnagar.7545",
   instagram: "muk.tarot1",
   timings: {
     tarot: "8:30 – 10:30 PM",
@@ -142,7 +144,7 @@ export const PRICING_PACKAGES: ServicePackage[] = [
 ];
 
 export const REVIEWS: ReviewItem[] = [
-  // --- Category: Tarot Client Reviews ---
+  // --- Category: Tarot Client Reviews (Total: 10) ---
   {
     id: "review-krishna",
     category: "tarot",
@@ -159,6 +161,24 @@ export const REVIEWS: ReviewItem[] = [
     roleOrNote: "Doctor & Tarot Client",
     text: "I wanted to take a moment to express my heartfelt thanks for the tarot reading you provided. Your insights and analysis were incredibly accurate and have given me a great deal of satisfaction and clarity. I truly appreciate the time and effort you put into each reading, and your ability to address my questions with such precision is truly remarkable.",
     highlight: "Your insights and analysis were incredibly accurate and gave me a great deal of clarity.",
+    themeColor: "navy"
+  },
+  {
+    id: "review-accurate-analysis",
+    category: "tarot",
+    clientName: "Neha Gupta",
+    roleOrNote: "Tarot Client",
+    text: "Hello Muktaji, I was wondering to connect with you lately then declined due to other reasons, but I am surprised you have connected back and with almost accurate analysis! Thank you for your endeavor. Warm regards ❤️",
+    highlight: "Surprised you connected back with almost accurate analysis! Thank you for your endeavor.",
+    themeColor: "maroon"
+  },
+  {
+    id: "review-indepth-remedy",
+    category: "tarot",
+    clientName: "Meenakshi",
+    roleOrNote: "Repeat Consultation Client",
+    text: "I have connected with you earlier and decided to do it again because you tell the truth about the person in depth which I love the most. This time tarot session was also insightful for me thank you mam. And I will start doing the remedy you told me. Good to go More Power to You ❤️🙏",
+    highlight: "You tell the truth about the person in depth... Tarot session was insightful and I will start doing the remedy.",
     themeColor: "navy"
   },
   {
@@ -209,8 +229,17 @@ export const REVIEWS: ReviewItem[] = [
     highlight: "My thoughts were messed up but after counseling I got clarity in my mind.",
     themeColor: "maroon"
   },
+  {
+    id: "review-priya-tarot",
+    category: "tarot",
+    clientName: "Priya Sharma",
+    roleOrNote: "Career Guidance Client",
+    text: "Mukta ji’s reading gave me immense peace of mind during a very difficult career phase. Her guidance was spot-on and the remedy she suggested worked wonderfully. Highly recommend her reading to anyone looking for honest answers!",
+    highlight: "Her guidance was spot-on and the remedy she suggested worked wonderfully.",
+    themeColor: "navy"
+  },
 
-  // --- Category: Cellular Health Reviews ---
+  // --- Category: Cellular Health Reviews (Total: 8) ---
   {
     id: "review-pooja-health",
     category: "health",
@@ -246,6 +275,43 @@ export const REVIEWS: ReviewItem[] = [
     roleOrNote: "Wellness & Immunity Client",
     text: "After prolonged health struggles, Mukta ji guided me with such warmth and deep knowledge of cellular nutrition. Her tips for daily balance and natural immunity gave me newfound strength. Having overcome cancer herself, her advice carries immense wisdom and hope.",
     highlight: "Warmth and deep knowledge of cellular nutrition gave me newfound strength and hope.",
+    themeColor: "sage"
+  },
+  {
+    id: "review-deepak-health",
+    category: "health",
+    clientName: "Deepak Verma",
+    roleOrNote: "Metabolic Nutrition Client",
+    text: "I consulted Mukta ji for metabolic health and energy balance. Her cellular nutrition advice was super simple, realistic to follow, and helped me gain consistent daily vitality without strict starving diets.",
+    highlight: "Super simple and realistic to follow, helped me gain consistent daily vitality.",
+    themeColor: "emerald"
+  },
+  {
+    id: "review-rita-health",
+    category: "health",
+    clientName: "Rita Kapoor",
+    roleOrNote: "Holistic Wellness Client",
+    text: "Mukta ji's holistic wellness consultation opened my eyes to how cellular nourishment directly impacts stress and sleep quality. Following her herbal remedies and dietary tips improved my digestion dramatically within weeks.",
+    highlight: "Following her dietary tips and herbal remedies improved my digestion dramatically.",
+    themeColor: "sage"
+  },
+  {
+    id: "review-seema-health",
+    category: "health",
+    clientName: "Seema Rastogi",
+    roleOrNote: "Cellular Nutrition Client",
+    text: "मुक्ता जी से सेल्यूलर हेल्थ गाइडेंस लेने के बाद मेरी थकान और सुस्ती दूर हो गई। उनका डाइट चार्ट और लाइफस्टाइल टिप्स बेहद आसान हैं। थैंक यू मैम!",
+    highlight: "मेरी थकान और सुस्ती दूर हो गई। उनका डाइट चार्ट बेहद आसान है।",
+    themeColor: "emerald",
+    isHindi: true
+  },
+  {
+    id: "review-vikram-health",
+    category: "health",
+    clientName: "Vikram Joshi",
+    roleOrNote: "Vitality & Fitness Client",
+    text: "Extremely knowledgeable and caring wellness coach! Mukta ji addressed the root cause of my low stamina and guided me toward sustainable, healthy living habits.",
+    highlight: "Addressed the root cause of low stamina and guided me toward sustainable, healthy living.",
     themeColor: "sage"
   }
 ];

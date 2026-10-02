@@ -79,7 +79,7 @@ export const Contact: React.FC = () => {
                 {/* Email & Instagram Row */}
                 <div className="flex items-center gap-4 text-xs sm:text-sm">
                   <span className="w-20 text-[#3E2F3A]/60 font-medium shrink-0">Online</span>
-                  <div className="flex flex-wrap items-center gap-3 text-[#3E2F3A]/80">
+                  <div className="flex flex-wrap items-center gap-2.5 text-[#3E2F3A]/80">
                     <a
                       href={`mailto:${PROFILE_INFO.email}`}
                       className="inline-flex items-center gap-1 hover:text-[#E8912D] transition-colors"
@@ -89,13 +89,23 @@ export const Contact: React.FC = () => {
                     </a>
                     <span>·</span>
                     <a
-                      href={`https://instagram.com/${PROFILE_INFO.instagram}`}
+                      href={`https://instagram.com/${PROFILE_INFO.instagramTarot}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 hover:text-[#E8912D] transition-colors"
+                      className="inline-flex items-center gap-1 hover:text-[#E8912D] transition-colors font-medium"
                     >
-                      <Instagram className="w-3.5 h-3.5" />
-                      <span>@{PROFILE_INFO.instagram}</span>
+                      <Instagram className="w-3.5 h-3.5 text-[#E8912D]" />
+                      <span>Tarot: @{PROFILE_INFO.instagramTarot}</span>
+                    </a>
+                    <span>·</span>
+                    <a
+                      href={`https://instagram.com/${PROFILE_INFO.instagramNutrition}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 hover:text-[#E8912D] transition-colors font-medium"
+                    >
+                      <Instagram className="w-3.5 h-3.5 text-[#5B8556]" />
+                      <span>Nutrition: @{PROFILE_INFO.instagramNutrition}</span>
                     </a>
                   </div>
                 </div>

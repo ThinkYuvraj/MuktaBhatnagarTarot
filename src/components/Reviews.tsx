@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect, useMemo, useCallback } from 'react'
 import { REVIEWS } from '../data/content';
 import { Sparkles, MessageSquareHeart, HeartPulse, Compass, Star, ShieldCheck } from 'lucide-react';
 import muktaStoryPhoto from '../assets/images/mukta_saree_reading_1790319437505.jpg';
+import muktaNutritionPhoto from '../assets/images/mukta_nutrition_photo.jpg';
 
 export const Reviews: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<'tarot' | 'health'>('tarot');
@@ -262,9 +263,9 @@ export const Reviews: React.FC = () => {
                           </span>
                           <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border border-white/30 shrink-0">
                             <img
-                              src={muktaStoryPhoto}
+                              src={isHealth ? muktaNutritionPhoto : muktaStoryPhoto}
                               alt="Mukta Bhatnagar"
-                              className="w-full h-full object-cover"
+                              className="w-full h-full object-cover object-top"
                             />
                           </div>
                         </div>

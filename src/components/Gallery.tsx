@@ -17,26 +17,26 @@ interface GalleryItem {
 const GALLERY_ITEMS: GalleryItem[] = [
   {
     id: "tarot-spread",
-    title: "Tarot Cards Spread & Sacred Cloth",
-    caption: "Classic Rider-Waite cards arranged with healing crystal grids and celestial astrological tapestry.",
-    image: tarotSetupPhoto,
-    tag: "Tarot Spread",
+    title: "Sacred Altar & Tarot Reading",
+    caption: "Intuitive card spreads and spiritual clarity sessions with Mukta Bhatnagar.",
+    image: sacredAltarPhoto,
+    tag: "Tarot Reading",
     objectPos: "object-center"
   },
   {
     id: "delhi-sanctuary",
-    title: "Sacred Sanctuary & Reading Space",
-    caption: "Peaceful, harmonious atmosphere designed for sacred tarot setup & holistic wellness consultations.",
+    title: "In-Person Tarot Consultation",
+    caption: "Live 1-on-1 tarot reading consultation in Mukta's peaceful office sanctuary.",
     image: officeReadingPhoto,
-    tag: "Reading Sanctuary",
+    tag: "Tarot Consultation",
     objectPos: "object-center"
   },
   {
     id: "sacred-altar",
-    title: "Sacred Altar & Healing Crystals",
-    caption: "Tibetan singing bowl, amethyst cluster, rose quartz crystals, and warm candlelight for spiritual clarity.",
-    image: sacredAltarPhoto,
-    tag: "Crystal Altar",
+    title: "Sacred Altar & Sanctuary Setup",
+    caption: "Harmonious reading space featuring Lord Ganesha, healing crystals, and sacred energy tools.",
+    image: tarotSetupPhoto,
+    tag: "Sacred Sanctuary",
     objectPos: "object-center"
   },
   {
