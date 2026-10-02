@@ -56,6 +56,7 @@ export const PROFILE_INFO = {
   instagramTarot: "muk.tarot1",
   instagramNutrition: "mukta.bhatnagar.7545",
   instagram: "muk.tarot1",
+  facebookUrl: "https://www.facebook.com/share/1USynptUnf/",
   timings: {
     tarot: "8:30 – 10:30 PM",
     wellness: "11:30 AM – 5:30 PM"

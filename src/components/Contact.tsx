@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PROFILE_INFO } from '../data/content';
-import { MapPin, Clock, Phone, MessageCircle, ExternalLink, Mail, Instagram, ShieldCheck, AlertCircle, Send } from 'lucide-react';
+import { MapPin, Clock, Phone, MessageCircle, ExternalLink, Mail, Instagram, Facebook, ShieldCheck, AlertCircle, Send } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [name, setName] = useState('');
@@ -106,6 +106,16 @@ export const Contact: React.FC = () => {
                     >
                       <Instagram className="w-3.5 h-3.5 text-[#5B8556]" />
                       <span>Nutrition: @{PROFILE_INFO.instagramNutrition}</span>
+                    </a>
+                    <span>·</span>
+                    <a
+                      href={PROFILE_INFO.facebookUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 hover:text-[#E8912D] transition-colors font-medium"
+                    >
+                      <Facebook className="w-3.5 h-3.5 text-[#1877F2]" />
+                      <span>Facebook</span>
                     </a>
                   </div>
                 </div>
